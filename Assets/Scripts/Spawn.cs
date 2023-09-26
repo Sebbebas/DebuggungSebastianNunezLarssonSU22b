@@ -10,16 +10,11 @@ public class Spawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("Dothis", 1, .5f);
+        InvokeRepeating("SpawnEnemy", 1, .5f);
     }
 
-    void Dothis()
+    void SpawnEnemy()
     {
-        Instantiate(a[4], transform.position, Quaternion.identity);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        Instantiate(a[Random.Range(0, a.Length-1)], transform.position, Quaternion.identity);
     }
 }
