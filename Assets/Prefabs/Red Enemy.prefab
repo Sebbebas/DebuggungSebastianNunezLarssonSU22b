@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4675834888588143521}
   - component: {fileID: 4675834888588143520}
   m_Layer: 0
-  m_Name: Dynamic Sprite (56)
+  m_Name: Red Enemy
   m_TagString: dontforgettoupdatethetag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
