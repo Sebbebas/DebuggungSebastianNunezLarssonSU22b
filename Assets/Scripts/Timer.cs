@@ -2,18 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] float time = 30f;
     [SerializeField] TextMeshProUGUI timerText;
-
-    Sceneloader sceneloader;
-
-    private void Start()
-    {
-        sceneloader = GetComponent<Sceneloader>();
-    }
+    [SerializeField] float time = 30f;
 
     private void Update()
     {
@@ -24,7 +18,8 @@ public class Timer : MonoBehaviour
         if (time < 0)
         {
             time = 0;
-            sceneloader.LoadSceneNumber(2);
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

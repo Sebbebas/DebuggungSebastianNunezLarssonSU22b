@@ -28,7 +28,10 @@ public class Seek : MonoBehaviour
         else if(targetEnemy)
         {
             GameObject moveTowardsThis = GameObject.FindWithTag("Enemy");
-            transform.position = Vector3.MoveTowards(transform.position, moveTowardsThis.transform.position, movementspeed * Time.deltaTime);
+            if (moveTowardsThis != null)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, moveTowardsThis.transform.position, movementspeed * Time.deltaTime);
+            }
         }
     }
 }
