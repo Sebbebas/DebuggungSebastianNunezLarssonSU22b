@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 3073185789399827541}
   m_Layer: 0
   m_Name: Red Enemy
-  m_TagString: dontforgettoupdatethetag
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,6 +194,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e4931b52c8d6394a95e33be451ce939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  targetPlayer: 1
+  targetEnemy: 0
+  movementspeed: 5
 --- !u!114 &3073185789399827541
 MonoBehaviour:
   m_ObjectHideFlags: 0

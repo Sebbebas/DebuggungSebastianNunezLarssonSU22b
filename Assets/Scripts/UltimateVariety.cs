@@ -26,11 +26,11 @@ public class UltimateVariety : MonoBehaviour
     {
         if (doesWobble)
         {
-            transform.localScale = transform.localScale + new Vector3(Random.Range(-wobbleForce, wobbleForce), Random.Range(-wobbleForce, wobbleForce), 0);
+            transform.localScale = transform.localScale + new Vector3(Random.Range(-wobbleForce, wobbleForce), Random.Range(-wobbleForce, wobbleForce), 0 * Time.deltaTime);
         }
         if (doesMove)
         {
-            transform.position = transform.position + new Vector3(Random.Range(-moveForce, moveForce), Random.Range(-moveForce, moveForce), Random.Range(0, 0));
+            transform.position = transform.position + new Vector3(Random.Range(-moveForce, moveForce), Random.Range(-moveForce, moveForce), Random.Range(0, 0) * Time.deltaTime);
         }
     }
 
@@ -44,7 +44,7 @@ public class UltimateVariety : MonoBehaviour
         }
         else if(other.gameObject.tag == antidote && changeSize)
         {
-            transform.localScale -= new Vector3(sizeIncrease, sizeIncrease, 0);
+            transform.localScale -= new Vector3(sizeIncrease, sizeIncrease, 0 * Time.deltaTime);
             Destroy(other.gameObject);
         }
     }
