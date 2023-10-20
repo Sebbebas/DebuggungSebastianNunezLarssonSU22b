@@ -6,12 +6,10 @@ public class Spawner : MonoBehaviour
 {
     [SerializeField] Transform[] spawnPos;
     [SerializeField] GameObject[] objects;
-    [SerializeField] float spawnSpeed = 1f;
-    [SerializeField] float spawnTime = 0.5f;
     
     void Start()
     {
-        InvokeRepeating("SpawnEnemy", spawnSpeed, spawnTime);
+        InvokeRepeating("SpawnEnemy", 1, 0.5f);
     }
 
     void SpawnEnemy()
